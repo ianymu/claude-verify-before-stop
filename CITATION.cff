@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "verify-before-stop: A Claude Code Stop hook for blocking 'lies of completion'"
+authors:
+  - given-names: Ian
+    family-names: Mu
+    email: ian.y.mu@gmail.com
+date-released: 2026-05-20
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/ianymu/claude-verify-before-stop"
+url: "https://landing-ianymu.vercel.app"
+abstract: >
+  A bash-based Stop hook for Claude Code that blocks session-end events
+  when source files have changed but no verification action has been
+  logged within a configurable time window. Catches "lies of completion"
+  — the common failure mode where the model claims work is done without
+  having actually verified.
+keywords:
+  - claude-code
+  - anthropic
+  - llm-hooks
+  - workflow-guard
+  - ai-coding
+  - productivity

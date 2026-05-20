@@ -8,6 +8,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-rose)](https://docs.anthropic.com/en/docs/claude-code)
 [![No deps](https://img.shields.io/badge/dependencies-zero-emerald)](#install)
+[![GitHub stars](https://img.shields.io/github/stars/ianymu/claude-verify-before-stop?style=social)](https://github.com/ianymu/claude-verify-before-stop/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/ianymu/claude-verify-before-stop)](https://github.com/ianymu/claude-verify-before-stop/commits/main)
+[![Issues](https://img.shields.io/github/issues/ianymu/claude-verify-before-stop)](https://github.com/ianymu/claude-verify-before-stop/issues)
 
 ![verify-before-stop demo: Claude claims "all tests passing" but the Stop hook blocks session end because no verification was logged, forcing Claude to actually run tests](docs/demo.svg)
 
