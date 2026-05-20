@@ -1,5 +1,8 @@
 # verify-before-stop.sh
 
+![Demo: verify-before-stop hook blocking lies of completion](demo.svg)
+
+
 > A Claude Code Stop hook that blocks the session from ending until verification is logged. Stops "lies of completion" cold.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

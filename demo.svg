@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="ui-monospace,Menlo,monospace" font-size="13">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect x="10" y="10" width="740" height="440" rx="12" fill="url(#bg)" stroke="#334155"/>
+
+  <!-- Title bar -->
+  <rect x="10" y="10" width="740" height="32" rx="12" fill="#1e293b"/>
+  <rect x="10" y="30" width="740" height="12" fill="#1e293b"/>
+  <circle cx="32" cy="26" r="6" fill="#f43f5e"/>
+  <circle cx="52" cy="26" r="6" fill="#f59e0b"/>
+  <circle cx="72" cy="26" r="6" fill="#10b981"/>
+  <text x="95" y="30" fill="#94a3b8">.claude/hooks/  —  verify-before-stop in action</text>
+
+  <!-- Scene 1: Without hook (top) -->
+  <text x="30" y="68" fill="#64748b">WITHOUT verify-before-stop:</text>
+  <text x="30" y="92" fill="#e2e8f0">
+    <tspan fill="#0ea5e9">claude</tspan>&gt; All tests passing <tspan fill="#10b981">✓</tspan>  Done!
+  </text>
+  <text x="30" y="112" fill="#94a3b8">$ git push</text>
+  <text x="30" y="132" fill="#f43f5e">$ vercel logs --prod   # 30 min later: 500 errors</text>
+  <text x="30" y="152" fill="#94a3b8">$ npm test</text>
+  <text x="30" y="172" fill="#f43f5e">  FAIL  3 tests failed (never actually ran)</text>
+
+  <!-- Separator -->
+  <line x1="30" y1="200" x2="730" y2="200" stroke="#334155" stroke-dasharray="3 3"/>
+
+  <!-- Scene 2: With hook -->
+  <text x="30" y="222" fill="#10b981">WITH verify-before-stop:</text>
+
+  <text x="30" y="246" fill="#e2e8f0">
+    <tspan fill="#0ea5e9">claude</tspan>&gt; All tests passing <tspan fill="#10b981">✓</tspan>  Done!
+  </text>
+
+  <text x="30" y="266" fill="#f43f5e">⛔ STOP BLOCKED: files changed but no verification logged.</text>
+  <text x="30" y="284" fill="#f59e0b">   Required: log a VERIFIED entry from the last 5 min.</text>
+
+  <text x="30" y="312" fill="#e2e8f0">
+    <tspan fill="#0ea5e9">claude</tspan>&gt; Running tests now...
+  </text>
+  <text x="30" y="332" fill="#94a3b8">$ npm test</text>
+  <text x="30" y="352" fill="#f43f5e">  FAIL  3 tests failed</text>
+  <text x="30" y="370" fill="#e2e8f0">
+    <tspan fill="#0ea5e9">claude</tspan>&gt; You're right — 3 tests failing. Fixing now.
+  </text>
+
+  <!-- Bottom badge -->
+  <rect x="30" y="395" width="700" height="40" rx="8" fill="#0ea5e9" opacity="0.1" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="50" y="420" fill="#0ea5e9" font-weight="bold">→</text>
+  <text x="70" y="420" fill="#e2e8f0">verify-before-stop.sh — Stop hook that blocks "lies of completion". Free, MIT.</text>
+  <text x="630" y="420" fill="#f43f5e" font-weight="bold">github →</text>
+</svg>
