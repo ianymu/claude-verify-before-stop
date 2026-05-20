@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+  <defs>
+    <style>
+      .term { fill: #0d1117; }
+      .border { fill: none; stroke: #30363d; stroke-width: 1; rx: 8; }
+      .titlebar { fill: #161b22; }
+      .dot-r { fill: #ff5f56; }
+      .dot-y { fill: #ffbd2e; }
+      .dot-g { fill: #27c93f; }
+      .prompt { fill: #56d364; }
+      .user   { fill: #c9d1d9; }
+      .ai     { fill: #58a6ff; }
+      .ok     { fill: #56d364; }
+      .err    { fill: #f85149; }
+      .warn   { fill: #d29922; }
+      .dim    { fill: #8b949e; }
+      .label  { fill: #f0f6fc; font-weight: 600; }
+      @keyframes step1 { 0%, 18% { opacity: 0 } 22%, 100% { opacity: 1 } }
+      @keyframes step2 { 0%, 28% { opacity: 0 } 32%, 100% { opacity: 1 } }
+      @keyframes step3 { 0%, 40% { opacity: 0 } 44%, 100% { opacity: 1 } }
+      @keyframes step4 { 0%, 54% { opacity: 0 } 58%, 100% { opacity: 1 } }
+      @keyframes step5 { 0%, 68% { opacity: 0 } 72%, 100% { opacity: 1 } }
+      @keyframes step6 { 0%, 82% { opacity: 0 } 86%, 100% { opacity: 1 } }
+      .anim1 { animation: step1 6s ease-out infinite; }
+      .anim2 { animation: step2 6s ease-out infinite; }
+      .anim3 { animation: step3 6s ease-out infinite; }
+      .anim4 { animation: step4 6s ease-out infinite; }
+      .anim5 { animation: step5 6s ease-out infinite; }
+      .anim6 { animation: step6 6s ease-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Terminal frame -->
+  <rect class="term border" x="10" y="10" width="760" height="340" rx="8"/>
+  <rect class="titlebar" x="10" y="10" width="760" height="26" rx="8"/>
+  <rect class="titlebar" x="10" y="22" width="760" height="14"/>
+  <circle class="dot-r" cx="28" cy="23" r="5"/>
+  <circle class="dot-y" cx="46" cy="23" r="5"/>
+  <circle class="dot-g" cx="64" cy="23" r="5"/>
+  <text x="390" y="27" text-anchor="middle" class="dim">claude-code  ~/your-project</text>
+
+  <!-- Lines -->
+  <g class="anim1">
+    <text x="24" y="68" class="prompt">$</text>
+    <text x="40" y="68" class="user">claude</text>
+    <text x="98" y="68" class="dim">"fix the broken auth flow"</text>
+  </g>
+
+  <g class="anim2">
+    <text x="24" y="96" class="ai">claude</text>
+    <text x="78" y="96" class="user"> &gt; edited src/auth.ts (+24, -12)</text>
+  </g>
+
+  <g class="anim3">
+    <text x="24" y="120" class="ai">claude</text>
+    <text x="78" y="120" class="user"> &gt; "All tests passing</text>
+    <text x="232" y="120" class="ok">✓</text>
+    <text x="246" y="120" class="user">"</text>
+    <text x="24" y="140" class="ai">claude</text>
+    <text x="78" y="140" class="user"> &gt; ending session...</text>
+  </g>
+
+  <g class="anim4">
+    <rect x="24" y="158" width="732" height="92" rx="6" fill="#1c1f26" stroke="#f85149" stroke-width="1"/>
+    <text x="36" y="178" class="err">✗ BLOCKED by verify-before-stop.sh</text>
+    <text x="36" y="200" class="dim">Files changed in this session but no VERIFIED entry in</text>
+    <text x="36" y="218" class="dim">.claude/state/stop-verify.log from the last 5 minutes.</text>
+    <text x="36" y="238" class="dim">You must run real verification (npm test / curl / playwright) and log it.</text>
+  </g>
+
+  <g class="anim5">
+    <text x="24" y="272" class="ai">claude</text>
+    <text x="78" y="272" class="user"> &gt; running</text>
+    <text x="148" y="272" class="warn">npm test</text>
+    <text x="208" y="272" class="user">...</text>
+    <text x="24" y="290" class="user"> 3 failed, 47 passed</text>
+    <text x="24" y="308" class="ai">claude</text>
+    <text x="78" y="308" class="user"> &gt; "Actually tests are failing. Fixing now."</text>
+  </g>
+
+  <g class="anim6">
+    <rect x="24" y="320" width="732" height="22" rx="4" fill="#0d1f12" stroke="#238636" stroke-width="1"/>
+    <text x="36" y="336" class="ok">→  AI lie caught. Real verification required before session can end.</text>
+  </g>
+</svg>

@@ -9,6 +9,8 @@
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-rose)](https://docs.anthropic.com/en/docs/claude-code)
 [![No deps](https://img.shields.io/badge/dependencies-zero-emerald)](#install)
 
+![verify-before-stop demo: Claude claims "all tests passing" but the Stop hook blocks session end because no verification was logged, forcing Claude to actually run tests](docs/demo.svg)
+
 ## The problem
 
 If you've used Claude Code for more than a week, you've seen this:
