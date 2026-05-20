@@ -11,6 +11,10 @@
 
 ![verify-before-stop demo: Claude claims "all tests passing" but the Stop hook blocks session end because no verification was logged, forcing Claude to actually run tests](docs/demo.svg)
 
+
+> **🛠 Free tool**: [Generate a hook customized for your stack](https://landing-ianymu.vercel.app/hook-generator/) — answer 4 questions, get a personalized verify-before-stop script.
+
+
 ## The problem
 
 If you've used Claude Code for more than a week, you've seen this:
